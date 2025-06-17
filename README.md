@@ -11,8 +11,8 @@
   <p><strong>Ajuda.ai</strong> é uma plataforma digital voltada para impacto social, que conecta pessoas dispostas a oferecer ajuda voluntária com aquelas que realmente precisam de apoio na sua comunidade.</p>
 
   <p>🔗 <strong>Acesse o projeto online:</strong>  
-    <a href="https://daviricard0.github.io/Ajuda-Ai/" target="_blank">
-      https://daviricard0.github.io/Ajuda-Ai/
+    <a href="https://viniciuslordron.github.io/Ajuda-Ai/" target="_blank">
+      https://viniciuslordron.github.io/Ajuda-Ai/
     </a>
   </p>
 
