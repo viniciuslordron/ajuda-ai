@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais Voluntários - Ajuda.ai</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar (igual às outras páginas) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img height="40px" src="assets/images/ajudaai.png" alt="">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="voluntarios.html" class="active">Quem ajuda</a></li>
+                <li><a href="precisa.html">Quem precisa</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da Página -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Profissionais dispostos a ajudar</h1>
+            <p class="page-subtitle">Conheça os voluntários que estão prontos para fazer a diferença na comunidade</p>
+        </div>
+    </header>
+
+    <!-- Seção de Filtros e Pesquisa -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="search-filter">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Buscar por profissão, nome ou especialidade..."
+                            aria-label="Buscar profissionais">
+                    </div>
+                </div>
+                <div class="sort-filters">
+                    <select id="sortBy" aria-label="Ordenar por">
+                        <option value="distance">Ordenar por distância</option>
+                        <option value="rating">Melhor avaliados</option>
+                        <option value="recent">Mais recentes</option>
+                        <option value="alphabetical">Ordem alfabética</option>
+                    </select>
+                    <select id="filterProfession" aria-label="Filtrar por profissão">
+                        <option value="all">Todas as profissões</option>
+                        <option value="health">Saúde</option>
+                        <option value="education">Educação</option>
+                        <option value="technical">Técnicos</option>
+                        <option value="beauty">Beleza</option>
+                        <option value="support">Apoio</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de Profissionais -->
+    <main class="volunteers-list-section">
+        <div class="container">
+            <div class="results-info">
+                <span id="resultsCount">Mostrando 10 de 32 profissionais</span>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="list" aria-label="Visualização em lista">
+                        <i class="fas fa-list"></i>
+                    </button>
+                    <button class="view-btn" data-view="grid" aria-label="Visualização em grade">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="volunteers-container" id="volunteersContainer">
+                <!-- Card 1 -->
+                <article class="volunteer-card-detailed">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=80&h=80&fit=crop&crop=face"
+                            alt="Foto de Dr. Lucas Silva" class="volunteer-photo">
+                        <div class="volunteer-info">
+                            <h3>Dr. Lucas Silva</h3>
+                            <p class="profession">
+                                <i class="fas fa-user-md"></i>
+                                Fisioterapeuta
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente, SP
+                            </p>
+                        </div>
+                        <div class="distance-badge">
+                            <i class="fas fa-route"></i>
+                            1.8 km
+                        </div>
+                    </div>
+
+                    <div class="volunteer-details">
+                        
+
+
+                        <div class="volunteer-description">
+                            <p>Fisioterapeuta com 15 anos de experiência. Ofereço consultas gratuitas para pessoas que não têm condições de pagar.</p>
+                        </div>
+
+                        <div class="availability">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Disponível: Sábados das 9h às 12h</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="volunteer-stats">
+                            <span class="stat">
+                                <i class="fas fa-hands-helping"></i>
+                                47 pessoas ajudadas
+                            </span>
+                        </div>
+                        <button class="btn-contact-detailed">
+                            <i class="fas fa-message"></i>
+                            Entrar em Contato
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="volunteer-card-detailed">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5c5?w=80&h=80&fit=crop&crop=face"
+                            alt="Foto de Ana Costa" class="volunteer-photo">
+                        <div class="volunteer-info">
+                            <h3>Ana Costa</h3>
+                            <p class="profession">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                Professora de Matemática
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente, SP
+                            </p>
+                        </div>
+                        <div class="distance-badge">
+                            <i class="fas fa-route"></i>
+                            2.3 km
+                        </div>
+                    </div>
+
+                    <div class="volunteer-details">
+                       
+
+                        <div class="volunteer-description">
+                            <p>Professora de matemática há 12 anos, especializada em ensino fundamental e médio. Ofereço
+                                aulas de reforço gratuitas para crianças e adolescentes com dificuldades de
+                                aprendizagem.</p>
+                        </div>
+
+                        <div class="availability">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Disponível: Terças e quintas das 19h às 21h</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="volunteer-stats">
+                            <span class="stat">
+                                <i class="fas fa-hands-helping"></i>
+                                32 pessoas ajudadas
+                            </span>
+                        </div>
+                        <button class="btn-contact-detailed">
+                            <i class="fas fa-message"></i>
+                            Entrar em Contato
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="volunteer-card-detailed">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face"
+                            alt="Foto de Pedro Santos" class="volunteer-photo">
+                        <div class="volunteer-info">
+                            <h3>Pedro Santos</h3>
+                            <p class="profession">
+                                <i class="fas fa-bolt"></i>
+                                Eletricista
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente, SP
+                            </p>
+                        </div>
+                        <div class="distance-badge">
+                            <i class="fas fa-route"></i>
+                            3.1 km
+                        </div>
+                    </div>
+
+                    <div class="volunteer-details">
+                        
+
+                        <div class="volunteer-description">
+                            <p>Eletricista com 20 anos de experiência em instalações residenciais. Realizo pequenos
+                                reparos e manutenções elétricas gratuitamente para famílias em situação de
+                                vulnerabilidade.</p>
+                        </div>
+
+                        <div class="availability">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Disponível: Finais de semana das 8h às 17h</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="volunteer-stats">
+                            <span class="stat">
+                                <i class="fas fa-hands-helping"></i>
+                                28 pessoas ajudadas
+                            </span>
+                        </div>
+                        <button class="btn-contact-detailed">
+                            <i class="fas fa-message"></i>
+                            Entrar em Contato
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="volunteer-card-detailed">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80&h=80&fit=crop&crop=face"
+                            alt="Foto de Dra. Mariana Oliveira" class="volunteer-photo">
+                        <div class="volunteer-info">
+                            <h3>Dra. Mariana Oliveira</h3>
+                            <p class="profession">
+                                <i class="fas fa-brain"></i>
+                                Psicóloga Clínica
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente, SP
+                            </p>
+                        </div>
+                        <div class="distance-badge">
+                            <i class="fas fa-route"></i>
+                            1.2 km
+                        </div>
+                    </div>
+
+                    <div class="volunteer-details">
+                        
+
+                        <div class="volunteer-description">
+                            <p>Psicóloga clínica especializada em terapia cognitivo-comportamental. Ofereço sessões
+                                gratuitas para pessoas em situação de vulnerabilidade emocional, com foco em ansiedade e
+                                depressão.</p>
+                        </div>
+
+                        <div class="availability">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Disponível: Quartas das 18h às 20h</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="volunteer-stats">
+                            <span class="stat">
+                                <i class="fas fa-hands-helping"></i>
+                                53 pessoas ajudadas
+                            </span>
+                        </div>
+                        <button class="btn-contact-detailed">
+                            <i class="fas fa-message"></i>
+                            Entrar em Contato
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="volunteer-card-detailed">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=80&h=80&fit=crop&crop=face"
+                            alt="Foto de Carlos Mendes" class="volunteer-photo">
+                        <div class="volunteer-info">
+                            <h3>Carlos Mendes</h3>
+                            <p class="profession">
+                                <i class="fas fa-cut"></i>
+                                Cabeleireiro
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente, SP
+                            </p>
+                        </div>
+                        <div class="distance-badge">
+                            <i class="fas fa-route"></i>
+                            4.5 km
+                        </div>
+                    </div>
+
+                    <div class="volunteer-details">
+                       
+                        <div class="volunteer-description">
+                            <p>Cabeleireiro profissional há 8 anos. Realizo cortes de cabelo gratuitos para pessoas que
+                                precisam se apresentar bem para entrevistas de emprego ou eventos importantes.</p>
+                        </div>
+
+                        <div class="availability">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Disponível: Domingos das 14h às 18h</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="volunteer-stats">
+                            <span class="stat">
+                                <i class="fas fa-hands-helping"></i>
+                                19 pessoas ajudadas
+                            </span>
+                        </div>
+                        <button class="btn-contact-detailed">
+                            <i class="fas fa-message"></i>
+                            Entrar em Contato
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="volunteer-card-detailed">
+                    <div class="card-header">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face"
+                            alt="Foto de Juliana Ferreira" class="volunteer-photo">
+                        <div class="volunteer-info">
+                            <h3>Juliana Ferreira</h3>
+                            <p class="profession">
+                                <i class="fas fa-laptop"></i>
+                                Instrutora de Informática
+                            </p>
+                            <p class="location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente, SP
+                            </p>
+                        </div>
+                        <div class="distance-badge">
+                            <i class="fas fa-route"></i>
+                            2.8 km
+                        </div>
+                    </div>
+
+                    <div class="volunteer-details">
+                        <div class="rating-section">
+                          
+                        <div class="volunteer-description">
+                            <p>Instrutora de informática especializada em ensinar pessoas da terceira idade. Ofereço
+                                aulas gratuitas de computação básica, internet e redes sociais para inclusão digital.
+                            </p>
+                        </div>
+
+                        <div class="availability">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Disponível: Segundas e quartas das 15h às 17h</span>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="volunteer-stats">
+                            <span class="stat">
+                                <i class="fas fa-hands-helping"></i>
+                                35 pessoas ajudadas
+                            </span>
+                        </div>
+                        <button class="btn-contact-detailed">
+                            <i class="fas fa-message"></i>
+                            Entrar em Contato
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Paginação -->
+            <div class="pagination-wrapper">
+                <nav aria-label="Navegação de páginas">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <button class="page-link" disabled>
+                                <i class="fas fa-chevron-left"></i>
+                                Anterior
+                            </button>
+                        </li>
+                        <li class="page-item active">
+                            <button class="page-link">1</button>
+                        </li>
+                        <li class="page-item">
+                            <button class="page-link">2</button>
+                        </li>
+                        <li class="page-item">
+                            <button class="page-link">3</button>
+                        </li>
+                        <li class="page-item">
+                            <button class="page-link">
+                                Próximo
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-heart"></i>
+                        <span>Ajuda.ai</span>
+                    </div>
+                    <p class="footer-description">
+                        Conectando corações que querem ajudar com quem precisa de apoio em sua comunidade.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="sobre.html"><i class="fas fa-info-circle"></i>Sobre Nós</a></li>
+                        <li><a href="#help"><i class="fas fa-hands-helping"></i>Como Ajudar</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i>Contato</a></li>
+                        <li><a href="#privacy"><i class="fas fa-shield-alt"></i>Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Ajuda.ai. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-heart fa-beat"></i>
+            <p>Carregando profissionais voluntários...</p>
+        </div>
+    </div>
+
+    <script src="volunteers-list.js"></script>
+</body>
+
+</html>

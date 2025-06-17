@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajuda.ai - Conectando Corações</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body>
+    <!-- Navbar Glassmorphism -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img height="40px" src="assets/images/ajudaai.png" alt="">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="voluntarios.html">Quem ajuda</a></li>
+                <li><a href="precisa.html">Quem precisa</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Modificado -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-sparkles"></i>
+                    <span>Plataforma de Impacto Social</span>
+                </div>
+                <h1 class="hero-title">
+                    Conectando <span class="gradient-text">corações</span> que querem ajudar
+                </h1>
+                <p class="hero-subtitle">
+                    Uma plataforma inovadora que une pessoas dispostas a oferecer serviços voluntários
+                    com quem realmente precisa de ajuda em sua comunidade.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-hands-helping"></i>
+                        Quero Ajudar
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        Preciso de Ajuda
+                    </button>
+                </div>
+            </div>
+
+            <!-- Nova seção do mapa -->
+            <div class="hero-map-section">
+                <h2 class="map-title">Pessoas que precisam de ajuda</h2>
+                <div class="map-container">
+                    <div id="interactive-map"></div>
+                    <div class="map-overlay">
+                        <div class="map-stats">
+                            <div class="map-stat">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>12 pessoas próximas</span>
+                            </div>
+                            <div class="map-stat">
+                                <i class="fas fa-clock"></i>
+                                <span>3 urgentes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Pesquisa de Serviço Voluntário -->
+    <section class="search-section">
+        <div class="search-container">
+            <div class="search-wrapper">
+                <form class="search-form" autocomplete="off">
+                    <div class="input-wrapper">
+                        <input type="text" id="search-input" class="search-input"
+                            placeholder="Qual serviço voluntário você precisa?"
+                            aria-label="Qual serviço voluntário você precisa?">
+                        <button type="submit" class="search-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="search-suggestions">
+                    <div class="suggestion-tags">
+                        <button class="suggestion-tag">Aulas de reforço</button>
+                        <button class="suggestion-tag">Consulta médica</button>
+                        <button class="suggestion-tag">Reparo elétrico</button>
+                        <button class="suggestion-tag">Apoio psicológico</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seção Quem Está Ajudando -->
+    <section class="helpers-section" id="helpers">
+        <div class="container">
+            <div class="section-header">
+                <h2>Veja quem está ajudando</h2>
+                <p>Conheça alguns dos nossos voluntários incríveis</p>
+            </div>
+            <div class="helpers-carousel">
+                <div class="helper-card">
+                    <div class="helper-avatar">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=150&h=150&fit=crop&crop=face"
+                            alt="Dr. Lucas">
+                        <div class="helper-status"></div>
+                    </div>
+                    <h3>Dr. Lucas Silva</h3>
+                    <p class="helper-profession">Fisioterapeuta</p>
+                    <p class="helper-testimonial">Fisioterapeuta com 15 anos de experiência. Ofereço consultas gratuitas
+                        para pessoas que não têm condições de pagar.</p>
+
+                </div>
+                <div class="helper-card">
+                    <div class="helper-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5c5?w=150&h=150&fit=crop&crop=face"
+                            alt="Ana">
+                        <div class="helper-status"></div>
+                    </div>
+                    <h3>Ana Costa</h3>
+                    <p class="helper-profession">Professora de Matemática</p>
+                    <p class="helper-testimonial">Professora de matemática há 12 anos, especializada em ensino fundamental e médio. Ofereço
+                        aulas de reforço gratuitas para crianças e adolescentes com dificuldades de
+                        aprendizagem.</p>
+
+                </div>
+                <div class="helper-card">
+                    <div class="helper-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+                            alt="Pedro">
+                        <div class="helper-status"></div>
+                    </div>
+                    <h3>Pedro Santos</h3>
+                    <p class="helper-profession">Eletricista</p>
+                    <p class="helper-testimonial">Eletricista com 20 anos de experiência em instalações residenciais. Realizo pequenos
+                        reparos e manutenções elétricas gratuitamente para famílias em situação de
+                        vulnerabilidade.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Pessoas que Precisam -->
+    <!-- Seção Pessoas que Precisam -->
+    <section class="needs-section" id="needs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pessoas que precisam do seu serviço</h2>
+                <p>Veja quem está aguardando sua ajuda</p>
+            </div>
+            <div class="needs-grid">
+                <div class="need-card">
+                    <div class="need-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face"
+                            alt="Sofia">
+                        <div class="need-info">
+                            <h3>Sofia Lima</h3>
+                            <p class="need-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente
+                            </p>
+                        </div>
+                        <div class="need-distance">
+                            <i class="fas fa-route"></i>
+                            2.1 km
+                        </div>
+                    </div>
+                    <div class="need-service">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Aulas de Reforço - Matemática</span>
+                    </div>
+                    <p class="need-description">Preciso de ajuda com matemática para minha filha de 12 anos que está com
+                        dificuldades na escola.</p>
+                    <button class="btn btn-contact">
+                        <i class="fas fa-message"></i>
+                        Entrar em Contato
+                    </button>
+                </div>
+
+                <div class="need-card">
+                    <div class="need-header">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
+                            alt="Rafael">
+                        <div class="need-info">
+                            <h3>Rafael Gomes</h3>
+                            <p class="need-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente
+                            </p>
+                        </div>
+                        <div class="need-distance">
+                            <i class="fas fa-route"></i>
+                            3.8 km
+                        </div>
+                    </div>
+                    <div class="need-service">
+                        <i class="fas fa-bolt"></i>
+                        <span>Reparo Elétrico</span>
+                    </div>
+                    <p class="need-description">Preciso trocar alguns disjuntores e verificar a instalação elétrica da
+                        minha casa.</p>
+                    <button class="btn btn-contact">
+                        <i class="fas fa-message"></i>
+                        Entrar em Contato
+                    </button>
+                </div>
+
+                <div class="need-card">
+                    <div class="need-header">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=face"
+                            alt="Clara">
+                        <div class="need-info">
+                            <h3>Clara Santos</h3>
+                            <p class="need-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Presidente Prudente
+                            </p>
+                        </div>
+                        <div class="need-distance">
+                            <i class="fas fa-route"></i>
+                            1.5 km
+                        </div>
+                    </div>
+                    <div class="need-service">
+                        <i class="fas fa-heart"></i>
+                        <span>Apoio Psicológico</span>
+                    </div>
+                    <p class="need-description">Passando por um momento difícil e preciso de alguém para conversar e me
+                        orientar.</p>
+                    <button class="btn btn-contact">
+                        <i class="fas fa-message"></i>
+                        Entrar em Contato
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Seção de Patrocinadores -->
+    <section class="sponsors-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Patrocinadores</h2>
+                <p>Empresas e organizações que apoiam nossa missão de conectar corações</p>
+            </div>
+
+            <div class="sponsors-carousel-wrapper">
+                <div class="sponsors-track">
+                    <div class="sponsor-slide">
+                        <img src="assets/images/ppmilgrau.jpeg" alt="Logo Patrocinador 1" class="sponsor-logo">
+                    </div>
+                    <div class="sponsor-slide">
+                        <img src="assets/images/sicoob.png" alt="Logo Patrocinador 2" class="sponsor-logo">
+                    </div>
+                    <div class="sponsor-slide">
+                        <img src="assets/images/funada.png" alt="Logo Patrocinador 3" class="sponsor-logo">
+                    </div>
+                    <div class="sponsor-slide">
+                        <img src="assets/images/pizzashopping.png" alt="Logo Patrocinador 4" class="sponsor-logo">
+                    </div>
+                    <div class="sponsor-slide">
+                        <img src="assets/images/unoeste.jpg" alt="Logo Patrocinador 5" class="sponsor-logo">
+                    </div>
+
+
+                    <!-- Duplicar os slides para loop infinito -->
+                    <div class="sponsor-slide">
+                        <img src="assets/images/ppmilgrau.jpeg" alt="Logo Patrocinador 1" class="sponsor-logo">
+                    </div>
+                    <div class="sponsor-slide">
+                        <img src="assets/images/sicoob.png" alt="Logo Patrocinador 2" class="sponsor-logo">
+                    </div>
+                    <div class="sponsor-slide">
+                        <img src="assets/images/funada.png" alt="Logo Patrocinador 3" class="sponsor-logo">
+                    </div>
+                    <div class="sponsor-slide">
+                        <img src="assets/images/pizzashopping.png" alt="Logo Patrocinador 4" class="sponsor-logo">
+                    </div>
+                    <div class="sponsor-slide">
+                        <img src="assets/images/unoeste.jpg" alt="Logo Patrocinador 5" class="sponsor-logo">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-heart"></i>
+                        <span>Ajuda.ai</span>
+                    </div>
+                    <p class="footer-description">
+                        Conectando corações que querem ajudar com quem precisa de apoio em sua comunidade.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="sobre.html"><i class="fas fa-info-circle"></i>Sobre Nós</a></li>
+                        <li><a href="#help"><i class="fas fa-hands-helping"></i>Como Ajudar</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i>Contato</a></li>
+                        <li><a href="#privacy"><i class="fas fa-shield-alt"></i>Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 Ajuda.ai. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
